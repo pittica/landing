@@ -1,0 +1,86 @@
+@import "@pittica/scss-functions";
+
+.section-booking {
+  .injected-svg {
+    .phone,
+    .bed,
+    .pillow,
+    .button,
+    .lamp-1,
+    .lamp-2,
+    .lamp-3,
+    .forniture-1,
+    .forniture-2,
+    .forniture-3 {
+      transform: translate3d(0, -120%, 0);
+    }
+    .bed-shadow,
+    .button-shadow,
+    .lamp-1-shadow,
+    .lamp-2-shadow,
+    .lamp-3-shadow,
+    .forniture-1-shadow,
+    .forniture-2-shadow,
+    .forniture-3-shadow {
+      opacity: 0;
+    }
+  }
+  &.is-active {
+    .injected-svg {
+      .phone {
+        @include animate(from-top, 0.4s, 0s, linear, 1);
+      }
+      .bed {
+        @include animate(from-top, 0.4s, 0.2s, linear, 1);
+      }
+      .pillow {
+        @include animate(from-top, 0.4s, 0.3s, linear, 1);
+      }
+      .button {
+        @include animate(from-top, 0.4s, 0.6s, linear, 1);
+      }
+      .bed-shadow {
+        @include animate(fade-in, 0.2s, 0.35s, linear, 1);
+      }
+      .button-shadow {
+        @include animate(fade-in, 0.2s, 0.55s, linear, 1);
+      }
+      .lamp-1 {
+        @include animate(from-top, 0.5s, 0.4s, linear, 1);
+      }
+      .lamp-2 {
+        @include animate(from-top, 0.5s, 0.6s, linear, 1);
+      }
+      .lamp-3 {
+        @include animate(from-top, 0.5s, 1.3s, linear, 1);
+      }
+      .lamp-1-shadow {
+        @include animate(fade-in, 0.2s, 0.75s, linear, 1);
+      }
+      .lamp-2-shadow {
+        @include animate(fade-in, 0.2s, 0.95s, linear, 1);
+      }
+      .lamp-3-shadow {
+        @include animate(fade-in, 0.2s, 1.55s, linear, 1);
+      }
+      .forniture-1 {
+        @include animate(from-top, 0.5s, 0.6s, linear, 1);
+      }
+      .forniture-2 {
+        @include animate(from-top, 0.5s, 0.4s, linear, 1);
+      }
+      .forniture-3 {
+        @include animate(from-top, 0.5s, 0.5s, linear, 1);
+      }
+      .forniture-1-shadow {
+        @include animate(fade-in, 0.2s, 0.95s, linear, 1);
+      }
+      .forniture-2-shadow {
+        @include animate(fade-in, 0.2s, 0.75s, linear, 1);
+      }
+      .forniture-3-shadow {
+        @include animate(fade-in, 0.2s, 0.85s, linear, 1);
+      }
+    }
+  }
+}

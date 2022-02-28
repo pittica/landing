@@ -1,0 +1,23 @@
+@import "../../variables";
+
+.section-empty {
+  &.is-dark {
+    .hero-body {
+      .title {
+        span {
+          background-color: transparent;
+        }
+      }
+      .subtitle {
+        span {
+          color: $primary-invert;
+          background-color: transparent;
+        }
+      }
+      .content {
+        color: $primary-invert;
+        background-color: transparent;
+      }
+    }
+  }
+}

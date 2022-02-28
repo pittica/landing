@@ -1,0 +1,92 @@
+@import "@pittica/scss-functions";
+
+.section-financial-marketing {
+  .injected-svg {
+    ellipse, circle, .spotlight {
+      opacity: 0;
+    }
+    .arrow {
+      transform: translate3d(120%, 120%, 0);
+    }
+    .numbers {
+      transform: translate3d(120%, 120%, 0);
+    }
+    .graph-top {
+      transform: translate3d(0, -120%, 0);
+    }
+    .graph-center {
+      transform: scale(1, 0);
+      transform-origin: center;
+    }
+    .graph-dots {
+      transform: translate3d(0, -120%, 0);
+    }
+    .horizontal-lines {
+      transform: translate3d(120%, 120%, 0);
+    }
+    .pipes {
+      .pipes-shadow {
+        opacity: 0;
+      }
+      .pipe-column {
+        transform: scale(1, 0);
+        transform-origin: center;
+      }
+    }
+    .raylight {
+      transform: scale(0, 0);
+      transform-origin: center;
+    }
+  }
+  &.is-active {
+    .injected-svg {
+      ellipse, circle, .spotlight {
+        @include animate(fade-quarter, 0.5s, 0.4s, linear, 1);
+      }
+      .arrow {
+        @include animate(from-bottom-right, 0.6s, 0s, linear, 1);
+      }
+      .numbers {
+        @include animate(from-bottom-right, 0.6s, 0.4s, linear, 1);
+      }
+      .graph-top {
+        @include animate(from-top, 0.5s, 0.1s, linear, 1);
+      }
+      .graph-center {
+        @include animate(from-top, 0.5s, 0.1s, linear, 1);
+      }
+      .graph-dots {
+        @include animate(from-top, 0.5s, 0.4s, linear, 1);
+      }
+      .horizontal-lines {
+        @include animate(from-bottom-right, 0.6s, 0.2s, linear, 1);
+      }
+      .pipes {
+        .pipes-shadow {
+          @include animate(fade-in, 0.4s, 0.8s, linear, 1);
+        }
+        .pipe-column-1 {
+          @include animate(vertical-scale, 0.6s, 0.2s, linear, 1);
+        }
+        .pipe-column-2 {
+          @include animate(vertical-scale, 0.6s, 0.25s, linear, 1);
+        }
+        .pipe-column-3 {
+          @include animate(vertical-scale, 0.6s, 0.3s, linear, 1);
+        }
+        .pipe-column-4 {
+          @include animate(vertical-scale, 0.6s, 0.35s, linear, 1);
+        }
+        .pipe-column-5 {
+          @include animate(vertical-scale, 0.6s, 0.4s, linear, 1);
+        }
+        .pipe-column-6 {
+          @include animate(vertical-scale, 0.6s, 0.45s, linear, 1);
+        }
+      }
+      .raylight {
+        @include animate(scale, 0.6s, 0.45s, linear, 1);
+      }
+    }
+  }
+}

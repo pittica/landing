@@ -1,0 +1,53 @@
+@import "../variables";
+
+.footer {
+  overflow: hidden;
+  a {
+    color: $white;
+    &:hover {
+      color: $white;
+    }
+  }
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+  .bracket-group {
+    position: relative;
+    padding-left: $size-3;
+    margin: $size-6;
+    &:before {
+      content: "";
+      display: block;
+      height: 90%;
+      width: 20px;
+      border: 3px solid $primary;
+      position: absolute;
+      top: 5%;
+      left: 0;
+      border-right: 0;
+    }
+    .icon {
+      position: absolute;
+      top: 30%;
+      left: -16px;
+      background-color: $grey-darker;
+      color: $white;
+      font-size: 24px;
+      padding: 16px;
+    }
+  }
+  .social-follow {
+    margin: $size-3 auto;
+    li {
+      display: inline-block;
+      padding: $size-7 $size-4 $size-7 0;
+      span {
+        display: none;
+      }
+      i {
+        font-size: $size-2;
+      }
+    }
+  }
+}

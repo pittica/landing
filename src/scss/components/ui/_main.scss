@@ -1,0 +1,37 @@
+@import "../../variables";
+
+.main {
+  overflow: hidden;
+  margin: 0 auto ($size-1 * 2) auto;
+  .inner-page {
+    .container {
+      h1 {
+        font-size: $size-1;
+      }
+      h2 {
+        font-size: $size-2;
+      }
+      h3 {
+        font-size: $size-3;
+      }
+      h4 {
+        font-size: $size-4;
+      }
+      h5 {
+        font-size: $size-5;
+      }
+      h6 {
+        font-size: $size-6;
+      }
+      ul {
+        &.inline {
+          li {
+            display: inline-block;
+            margin-right: $size-5;
+            margin-bottom: $size-5;
+          }
+        }
+      }
+    }
+  }
+}

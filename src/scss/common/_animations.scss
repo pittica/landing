@@ -1,0 +1,124 @@
+@import "@pittica/scss-functions";
+
+@include keyframes(from-top) {
+  0% {
+    transform: translate3d(0, -120%, 0);
+  }
+  85% {
+    transform: translate3d(0, 0, 0);
+    transform: scale(1, 0.8);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@include keyframes(from-bottom) {
+  0% {
+    transform: translate3d(0, 120%, 0);
+  }
+  85% {
+    transform: translate3d(0, 0, 0);
+    transform: scale(1, 0.8);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@include keyframes(from-top-left) {
+  0% {
+    transform: translate3d(-120%, -120%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@include keyframes(from-bottom-left) {
+  0% {
+    transform: translate3d(-120%, 120%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@include keyframes(from-bottom-right) {
+  0% {
+    transform: translate3d(120%, 120%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@include keyframes(vertical-scale) {
+  0% {
+    transform: scale(1, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@include keyframes(scale) {
+  0% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@include keyframes(fading-light) {
+  0% {
+    opacity: 0.2;
+    fill: $primary;
+  }
+  30% {
+    opacity: 0.5;
+    fill: $primary-invert;
+  }
+  60% {
+    opacity: 0.5;
+    fill: $primary-invert;
+  }
+  100% {
+    opacity: 0.2;
+    fill: $primary;
+  }
+}
+
+@include keyframes(fade-quarter) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+
+@include keyframes(fade-in) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(vertical-movements) {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  30% {
+    transform: translate3d(0, -2%, 0);
+  }
+  60% {
+    transform: translate3d(0, 2%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}

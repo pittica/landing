@@ -1,0 +1,13 @@
+@import "@pittica/scss-functions";
+@import "../../variables";
+
+.hero-foot {
+  .tabs {
+    justify-content: center;
+    .icon {
+      font-size: $size-7 * 3;
+      margin-bottom: $size-4;
+      @include animate(vertical-movements, 0.8s, 0s, linear, infinite);
+    }
+  }
+}

@@ -1,0 +1,88 @@
+@import "../variables";
+
+@import "~bulma/sass/utilities/mixins";
+
+.section-hero {
+  background-color: $white;
+  .injected-svg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: none;
+  }
+  .hero-body {
+    .title {
+      span {
+        background-color: rgba($primary-invert, 0.75);
+        padding: $size-6;
+        display: inline-block;
+        letter-spacing: $size-7 / 3;
+        font-size: $size-1;
+      }
+    }
+    .subtitle {
+      span {
+        background-color: rgba($primary-invert, 0.75);
+        padding: $size-7;
+        display: inline-block;
+      }
+    }
+    .content {
+      background-color: rgba($primary-invert, 0.75);
+      padding: $size-5;
+      .empty-list {
+        list-style-type: none;
+        margin-left: 0;
+        font-size: $size-3;
+        @include until($desktop) {
+          font-size: $size-4;
+        }
+        li {
+          margin-bottom: $size-5;
+          .icon-text {
+            span {
+              line-height: $size-2;
+              margin-left: $size-1 + $size-6;
+              padding-top: $size-7 / 2;
+              &.icon {
+                line-height: $size-1;
+                position: absolute;
+                background-color: $primary;
+                color: $primary-invert;
+                padding: ($size-6 / 4) ($size-6 / 2);
+                margin-left: 0;
+                display: inline-block;
+                text-align: center;
+                height: $size-1;
+                width: $size-1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.is-dark {
+    background-color: $grey-darker;
+    .hero-body {
+      .title {
+        span {
+          color: $primary;
+        }
+      }
+      .subtitle {
+        span {
+          color: $grey-darker;
+        }
+      }
+      .content {
+        color: $grey-darker;
+      }
+    }
+  }
+  &.is-active {
+    .injected-svg {
+      display: block;
+    }
+  }
+}

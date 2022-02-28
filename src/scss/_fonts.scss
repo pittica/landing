@@ -1,0 +1,34 @@
+@import "@pittica/icons";
+@import "@pittica/scss-functions";
+
+@import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i&display=swap");
+
+@include font("landing");
+@include icon-family("landing");
+
+@include icon("landing", "message", "\e900");
+@include icon("landing", "ring", "\e901");
+@include icon("landing", "ballot", "\e902");
+@include icon("landing", "cabinet", "\e903");
+@include icon("landing", "airplane", "\e904");
+@include icon("landing", "tune", "\e905");
+@include icon("landing", "cart", "\e906");
+@include icon("landing", "bag", "\e907");
+@include icon("landing", "map", "\e908");
+@include icon("landing", "restaurant", "\e909");
+@include icon("landing", "done", "\e90a");
+@include icon("landing", "busy", "\e90b");
+@include icon("landing", "calendar", "\e90c");
+@include icon("landing", "fire", "\e90d");
+@include icon("landing", "home", "\e90e");
+@include icon("landing", "shield", "\e90f");
+@include icon("landing", "speed", "\e910");
+@include icon("landing", "chart", "\e911");
+@include icon("landing", "storefront", "\e912");
+@include icon("landing", "cup", "\e913");
+@include icon("landing", "leaf", "\e914");
+@include icon("landing", "repair", "\e915");
+@include icon("landing", "medal", "\e916");
+@include icon("landing", "gears", "\e917");
+@include icon("landing", "qrcode", "\e918");
