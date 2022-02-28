@@ -37,7 +37,7 @@ export default function Switcher({ section }) {
             subtitle={section.subtitle}
             dark={section.dark}
           >
-            {section.content.html}
+            <div dangerouslySetInnerHTML={{ __html: section.content.html }} />
           </SectionSwitcher>
         )
       } else {
