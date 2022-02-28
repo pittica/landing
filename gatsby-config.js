@@ -3,13 +3,13 @@ require("dotenv").config()
 const { commalify } = require("@pittica/gatsby-plugin-utils")
 
 const siteUrl = process.env.URL || `https://${process.env.HOST}`
-const language = process.env.LANGUAGE.toLowerCase()
-const culture = process.env.CULTURE.toUpperCase()
+const language = process.env.LOCALE_LANGUAGE.toLowerCase()
+const culture = process.env.LOCALE_CULTURE.toUpperCase()
 
 module.exports = {
   siteMetadata: {
     title: process.env.NAME,
-    author: process.env.SITE_AUTHOR,
+    author: process.env.AUTHOR,
     description: process.env.SITE_DESCRIPTION,
     locale: {
       language,
@@ -147,35 +147,12 @@ module.exports = {
             const page = {
               path: new URL(path, siteUrl).href,
               changefreq: "daily",
-              priority: 0.5,
+              priority: 1.0,
               lastmod: null,
             }
 
-            if (pageContext) {
-              if (pageContext.updatedAt) {
-                page.lastmod = pageContext.updatedAt
-              }
-
-              if (pageContext.group) {
-                switch (pageContext.group) {
-                  case "post":
-                    page.changefreq = "monthly"
-                    page.priority = 0.7
-                    break
-                  case "page":
-                    page.priority = 0.8
-                    break
-                  case "portfolio":
-                    page.priority = 0.6
-                    break
-                  case "offers":
-                    page.priority = 0.7
-                    break
-                  default:
-                    page.priority = path === "/" ? 1.0 : 0.5
-                    break
-                }
-              }
+            if (pageContext && pageContext.updatedAt) {
+              page.lastmod = pageContext.updatedAt
             }
 
             return page
