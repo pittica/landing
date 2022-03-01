@@ -18,7 +18,12 @@ export default function Page({
             <div className="container">
               {title && <h1 className="title">{title}</h1>}
               {description && <h2 className="subtitle">{description}</h2>}
-              {intro && <div className="content">{intro.html}</div>}
+              {intro && (
+                <div
+                  className="content"
+                  dangerouslySetInnerHTML={{ __html: intro.html }}
+                />
+              )}
             </div>
           </header>
         </div>
