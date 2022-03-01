@@ -10,7 +10,7 @@ export default function Cart({ children, title, subtitle, dark }) {
     <SectionHero
       className="section-cart"
       dark={dark}
-      image="../../images/cart.svg"
+      image="/images/cart.svg"
     >
       <div className="container">
         {title && (

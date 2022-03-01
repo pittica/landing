@@ -32,6 +32,14 @@ fragment Asset on Asset {
       stage
     }
   }
+  seoPage {
+    ... on Page {
+      remoteTypeName: __typename
+      remoteId: id
+      locale
+      stage
+    }
+  }
   scheduledIn {
     ... on ScheduledOperation {
       remoteTypeName: __typename

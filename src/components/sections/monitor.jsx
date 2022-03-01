@@ -15,7 +15,7 @@ export default function Monitor({
     <SectionHero
       className="section-monitor"
       dark={dark}
-      image="../../images/monitor.svg"
+      image="/images/monitor.svg"
     >
       <div className="container has-text-right">
         {title && (

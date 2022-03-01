@@ -1,7 +1,5 @@
 require("dotenv").config()
 
-const { commalify } = require("@pittica/gatsby-plugin-utils")
-
 const siteUrl = process.env.URL || `https://${process.env.HOST}`
 const language = process.env.LOCALE_LANGUAGE.toLowerCase()
 const culture = process.env.LOCALE_CULTURE.toUpperCase()
@@ -143,23 +141,24 @@ module.exports = {
         `,
         resolveSiteUrl: () => siteUrl,
         resolvePages: ({ allSitePage: { nodes } }) =>
-          nodes.map(({ path, pageContext }) => {
-            const page = {
+          nodes
+            .map(({ path, pageContext }) => ({
               path: new URL(path, siteUrl).href,
               changefreq: "daily",
               priority: 1.0,
-              lastmod: null,
-            }
-
-            if (pageContext && pageContext.updatedAt) {
-              page.lastmod = pageContext.updatedAt
-            }
-
-            return page
-          }),
-        serialize: ({ path, changefreq, priority, lastmod }) => {
-          return { url: path, changefreq, priority, lastmod }
-        },
+              lastmod:
+                pageContext && pageContext.updatedAt
+                  ? pageContext.updatedAt
+                  : null,
+              sitemap: pageContext && pageContext.sitemap,
+            }))
+            .filter((node) => node.sitemap),
+        serialize: ({ url, changefreq, priority, lastmod }) => ({
+          url,
+          changefreq,
+          priority,
+          lastmod,
+        }),
       },
     },
     `gatsby-plugin-react-helmet`,

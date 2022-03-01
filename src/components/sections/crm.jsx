@@ -10,7 +10,7 @@ export default function Crm({ children, title, subtitle, dark }) {
     <SectionHero
       className="section-crm"
       dark={dark}
-      image="../../images/crm.svg"
+      image="/images/crm.svg"
     >
       <div className="container">
         {title && (

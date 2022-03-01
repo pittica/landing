@@ -27,6 +27,14 @@
         display: inline-block;
       }
     }
+    .header {
+      .title {
+        margin-bottom: $size-2;
+      }
+      .subtitle {
+        margin-bottom: $size-3;
+      }
+    }
     .content {
       background-color: rgba($primary-invert, 0.75);
       padding: $size-5;

@@ -1,9 +1,8 @@
 import React, { Fragment } from "react"
-import classNames from "classnames"
 import { graphql } from "gatsby"
 
 import Switcher from "../components/switcher"
-import HeroFoot from "../components/ui/hero-foot"
+import SectionHero from "../components/section-hero"
 
 export default function Page({
   data: {
@@ -12,23 +11,15 @@ export default function Page({
 }) {
   return (
     <Fragment>
-      <section className={classNames("hero", "is-fullheight")}>
-        <div className="hero-body">
+      <SectionHero>
+        <div className="container">
           <header className="header">
-            <div className="container">
-              {title && <h1 className="title">{title}</h1>}
-              {description && <h2 className="subtitle">{description}</h2>}
-              {intro && (
-                <div
-                  className="content"
-                  dangerouslySetInnerHTML={{ __html: intro.html }}
-                />
-              )}
-            </div>
+            {title && <h1 className="title">{title}</h1>}
+            {description && <h2 className="subtitle">{description}</h2>}
           </header>
+          {intro && <div dangerouslySetInnerHTML={{ __html: intro.html }} />}
         </div>
-        <HeroFoot />
-      </section>
+      </SectionHero>
       {sections.map((section) => (
         <Switcher section={section} key={`li-${section.id}`} />
       ))}
@@ -38,6 +29,11 @@ export default function Page({
 
 export const query = graphql`
   query PageTemplate($id: String!, $stage: GraphCMS_Stage!) {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     post: graphCmsPage(id: { eq: $id }, stage: { eq: $stage }) {
       id
       title
@@ -86,6 +82,13 @@ export const query = graphql`
       localeInfo {
         language
         culture
+      }
+      seo {
+        localFile {
+          childImageSharp {
+            gatsbyImageData(height: 628, width: 1200)
+          }
+        }
       }
     }
   }

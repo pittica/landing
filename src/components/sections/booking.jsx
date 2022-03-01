@@ -10,7 +10,7 @@ export default function Booking({ children, title, subtitle, dark }) {
     <SectionHero
       className="section-booking"
       dark={dark}
-      image="../../images/booking.svg"
+      image="/images/booking.svg"
     >
       <div className="container">
         {title && (

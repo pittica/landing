@@ -2,7 +2,6 @@ require("dotenv").config()
 
 const path = require("path")
 const { fileCategory, formatLocale } = require("@pittica/gatsby-plugin-utils")
-
 const { createAsset } = require("./src/utils/filesystem")
 
 exports.createPages = ({
@@ -19,6 +18,13 @@ exports.createPages = ({
             updatedAt
             locale
             stage
+            seo {
+              localFile {
+                childImageSharp {
+                  gatsbyImageData(height: 628, width: 1200)
+                }
+              }
+            }
           }
         }
       }
@@ -30,6 +36,7 @@ exports.createPages = ({
       toPath: "/404",
       isPermanent: true,
       statusCode: 404,
+      force: true,
     })
 
     pages.nodes.forEach(({ id, slug, updatedAt, locale, stage }) => {
@@ -42,6 +49,7 @@ exports.createPages = ({
           updatedAt,
           locale,
           stage,
+          sitemap: true,
         },
       })
     })

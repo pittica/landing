@@ -15,7 +15,7 @@ export default function FinancialMarketing({
     <SectionHero
       className="section-financial-marketing"
       dark={dark}
-      image="../../images/financial-marketing.svg"
+      image="/images/financial-marketing.svg"
     >
       <div className="container has-text-right">
         {title && (

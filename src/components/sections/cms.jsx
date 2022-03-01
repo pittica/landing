@@ -10,7 +10,7 @@ export default function Cms({ children, title, subtitle, dark }) {
     <SectionHero
       className="section-cms"
       dark={dark}
-      image="../../images/cms.svg"
+      image="/images/cms.svg"
     >
       <div className="container">
         {title && (

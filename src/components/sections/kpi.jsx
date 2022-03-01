@@ -10,7 +10,7 @@ export default function Kpi({ children, title, subtitle, dark }) {
     <SectionHero
       className="section-kpi"
       dark={dark}
-      image="../../images/kpi.svg"
+      image="/images/kpi.svg"
     >
       <div className="container">
         {title && (
