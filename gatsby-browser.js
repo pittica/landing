@@ -20,7 +20,10 @@ function getSeoImage(post, url) {
 
 export function wrapPageElement({ element, props: { data, location } }) {
   const post = data ? data.post : null
-  const image = getSeoImage(post, data ? data.site.siteMetadata.siteUrl : null)
+  const image = getSeoImage(
+    post,
+    data && data.site ? data.site.siteMetadata.siteUrl : null
+  )
 
   return (
     <Fragment>

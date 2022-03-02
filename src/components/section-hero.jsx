@@ -62,7 +62,7 @@ export default function SectionHero({ children, className, dark, image }) {
 SectionHero.propTypes = {
   children: PropTypes.any,
   className: PropTypes.string,
-  dark: PropTypes.bool.isRequired,
+  dark: PropTypes.bool,
   image: PropTypes.string,
 }
 

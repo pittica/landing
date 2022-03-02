@@ -3,14 +3,14 @@ import PropTypes from "prop-types"
 
 import SectionHero from "../section-hero"
 
-import "../../scss/components/sections/_crm.scss"
+import "../../scss/components/sections/_people.scss"
 
-export default function Crm({ children, title, subtitle, dark }) {
+export default function People({ children, title, subtitle, dark }) {
   return (
     <SectionHero
-      className="section-crm"
+      className="section-people"
       dark={dark}
-      image="/images/crm.svg"
+      image="/images/people.svg"
     >
       <div className="container">
         {title && (
@@ -29,13 +29,13 @@ export default function Crm({ children, title, subtitle, dark }) {
   )
 }
 
-Crm.propTypes = {
+People.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   children: PropTypes.any,
   dark: PropTypes.bool,
 }
 
-Crm.defaultProp = {
+People.defaultProp = {
   dark: true,
 }

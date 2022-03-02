@@ -38,7 +38,7 @@ Monitor.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   children: PropTypes.any,
-  dark: PropTypes.bool.isRequired,
+  dark: PropTypes.bool,
 }
 
 Monitor.defaultProp = {

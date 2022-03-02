@@ -4,6 +4,7 @@
 
 .section-hero {
   background-color: $white;
+  font-size: $size-4;
   .injected-svg {
     width: 100vw;
     height: 100vh;
@@ -76,15 +77,18 @@
       .title {
         span {
           color: $primary;
+          background-color: rgba($grey-darker, 0.75);
         }
       }
       .subtitle {
         span {
-          color: $grey-darker;
+          color: $primary-invert;
+          background-color: rgba($grey-darker, 0.75);
         }
       }
       .content {
-        color: $grey-darker;
+        color: $primary-invert;
+        background-color: rgba($grey-darker, 0.75);
       }
     }
   }

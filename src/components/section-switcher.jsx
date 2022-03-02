@@ -9,6 +9,7 @@ import FinancialMarketing from "./sections/financial-marketing"
 import Booking from "./sections/booking"
 import Kpi from "./sections/kpi"
 import Monitor from "./sections/monitor"
+import People from "./sections/people"
 
 export default function SectionSwitcher({
   template,
@@ -59,6 +60,12 @@ export default function SectionSwitcher({
         <Monitor title={title} subtitle={subtitle} dark={dark}>
           {children}
         </Monitor>
+      )
+    case "People":
+      return (
+        <People title={title} subtitle={subtitle} dark={dark}>
+          {children}
+        </People>
       )
     default:
       return (

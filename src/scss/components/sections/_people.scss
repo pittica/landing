@@ -1,0 +1,22 @@
+@import "@pittica/scss-functions";
+
+.section-people {
+  .injected-svg {
+    .people {
+      transform: translate3d(-120%, -120%, 0);
+    }
+    .woman {
+      transform: translate3d(120%, 120%, 0);
+    }
+  }
+  &.is-active {
+    .injected-svg {
+      .people {
+        @include animate(from-top-left, 0.5s, 0.1s, linear, 1);
+      }
+      .woman {
+        @include animate(from-bottom-right, 0.5s, 0.1s, linear, 1);
+      }
+    }
+  }
+}
