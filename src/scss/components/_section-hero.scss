@@ -12,18 +12,21 @@
     display: none;
   }
   .hero-body {
+    background-color: rgba($white, 0.75);
+    z-index: 1;
     .title {
       span {
-        background-color: rgba($primary-invert, 0.75);
         padding: $size-6;
         display: inline-block;
         letter-spacing: $size-7 / 3;
         font-size: $size-1;
+        @include until($desktop) {
+          font-size: $size-2;
+        }
       }
     }
     .subtitle {
       span {
-        background-color: rgba($primary-invert, 0.75);
         padding: $size-7;
         display: inline-block;
       }
@@ -37,8 +40,10 @@
       }
     }
     .content {
-      background-color: rgba($primary-invert, 0.75);
       padding: $size-5;
+      @include until($desktop) {
+        font-size: $size-6;
+      }
       .empty-list {
         list-style-type: none;
         margin-left: 0;
@@ -71,25 +76,31 @@
       }
     }
   }
+  .hero-foot {
+    background-color: rgba($white, 0.75);
+    z-index: 1;
+  }
   &.is-dark {
     background-color: $grey-darker;
     .hero-body {
+      background-color: rgba($grey-darker, 0.5);
       .title {
         span {
           color: $primary;
-          background-color: rgba($grey-darker, 0.75);
         }
       }
       .subtitle {
         span {
           color: $primary-invert;
-          background-color: rgba($grey-darker, 0.75);
         }
       }
       .content {
         color: $primary-invert;
-        background-color: rgba($grey-darker, 0.75);
       }
+    }
+    .hero-foot {
+      background-color: rgba($grey-darker, 0.5);
+      z-index: 1;
     }
   }
   &.is-active {
