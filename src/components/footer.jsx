@@ -97,9 +97,6 @@ export default function Footer({ locale }) {
                 <li>
                   <CookiesSettings label="Impostazioni Cookies" />
                 </li>
-                <li>
-                  <Link to="/legal">Note Legali</Link>
-                </li>
               </ul>
             </div>
             <div className="has-text-centered-mobile">
